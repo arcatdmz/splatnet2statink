@@ -7,6 +7,24 @@ splatnet2statink is a script that uploads battle data from the SplatNet 2 app ("
 
 (zh) 中文版的安装说明在[这里](https://cowlevel.net/article/1927016)。
 
+## Usage (Docker version)
+
+### Linux-like OS (e.g. macOS)
+
+```
+$ docker build . -t splatnet2statink
+$ docker run -it -v ./config.txt:/work/config.txt splatnet2statink
+```
+
+### Windows
+
+```
+> docker build . -t splatnet2statink
+> docker run -it -v C:\Users\{omitted}\splatnet2statink\config.txt:/work/config.txt splatnet2statink
+```
+
+The script runs with the `-r` flag. If you want to change it, edit `./Dockerfile` and build the image again.
+
 ## Usage
 
 ```
